@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %} показать {% endblock %}
+
+{% block content %}
+
+<br>
+	{% block photocontent %}
+		{% load staticfiles %}
+		<img src="{{ c.image.url }}" width="110" height="120" >
+	{% endblock %}
+	<br>
+	<h3> name: {{c.name}} </h3> 
+	price: {{c.price}} <br>
+	processor: {{c.processor}} <br>
+	ram_size: {{c.ram_size}} <br>
+	ram_type: {{c.ram_type}} <br>
+	cpu_frequency: {{c.cpu_frequency}} <br>
+	processor_cores: {{c.processor_cores}} <br>
+	ssd_capacity: {{c.ssd_capacity}} <br>
+
+
+{% endblock %}

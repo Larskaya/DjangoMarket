@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} <h1> компьютеры </h1> {% endblock %}
+
+{% block content %}
+
+	<div class='computers'>
+		{% if comps_list %}
+
+			{% for c in comps_list %}
+
+				{% block photocontent %}
+					{% load staticfiles %}
+					<img src="{{ c.image.url }}" width="110" height="120" >
+				{% endblock %}
+				
+				<h4> name: {{c.name}} </h4> 
+				price: {{c.price}} <br>
+				<hr>
+			{% endfor %}
+		{% endif %}
+	</div>
+
+{% endblock %}
+
+
+
+
+
+
+

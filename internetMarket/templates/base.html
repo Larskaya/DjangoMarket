@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+
+{% block head %}
+
+	{% block title %} {% endblock %}
+
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'computers/style.css' %}" />
+
+	<hr>
+	<div class='left_panel'> 
+		<a href='http://127.0.0.1:8000/all_computers/' class='main-page'> главная </a>
+		<a href='http://127.0.0.1:8000/desktop/' class='but-desktop'> настольные </a> <br>
+		<a href='http://127.0.0.1:8000/monoblock/' class='but-monoblock'> моноблоки </a>
+	</div>
+
+	<div class='right_panel'>
+		<a href='http://127.0.0.1:8000/busket/' class='but-busket'> корзина </a> 
+		<a href='http://127.0.0.1:8000/delivery/' class='but-delivery'> доставка </a> 
+	</div>
+
+{% endblock %}
+
+
+{% block page %}
+	{% block content %}
+
+	{% endblock %}
+{% endblock %}
+
